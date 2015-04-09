@@ -66,7 +66,7 @@ def setupNetwork():
     topo = BenchmarkTopo()
 
     # Controller for KTR network
-    net = Mininet(topo=topo, controller=lambda a: RemoteController( a, ip='141.13.92.68', port=6633 ), host=CPULimitedHost, link=TCLink)
+    net = Mininet(topo=topo, controller=lambda a: RemoteController( a, ip='127.0.0.1', port=6633 ), host=CPULimitedHost, link=TCLink)
     return net
 
 
@@ -90,7 +90,7 @@ def connectToRootNS( network, switch, ip, prefixLen, routes ):
 
 def sshd( network, cmd='/usr/sbin/sshd', opts='-D' ):
     "Start a network, connect it to root ns, and run sshd on all hosts."
-    ip = '10.123.123.1'  # our IP address on host network
+    ip = '10.0.2.15/32'  # our IP address on host network
     routes = [ '10.0.0.0/8' ]  # host networks to route to
     switch = network.switches[ 0 ]  # switch to use
     connectToRootNS( network, switch, ip, 8, routes )
