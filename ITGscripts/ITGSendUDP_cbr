@@ -36,4 +36,4 @@ duration="${4}"
 packetcount="${5}"
 #
 #GO TEST SOME STUFF
-sudo D-ITG/D-ITG-2.8.0-rc1/bin/ITGSend -a $destserv -rp 9500 -T UDP -C $packetcount -c $bitrate -t $duration -l $sendname -L $logserv -x $recvname -X $logserv
+sudo ~/D-ITG/bin/ITGSend -a $destserv -rp 9500 -T UDP -C $packetcount -c $bitrate -t $duration -l $sendname -L $logserv -x $recvname -X $logserv
