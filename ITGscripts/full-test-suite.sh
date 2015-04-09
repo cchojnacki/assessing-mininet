@@ -26,11 +26,11 @@ rm -rf log_*
 ##########################################################################################################################################
 echo '***** log server'
 bash -i -l -c 'sshpass -p mininet \
-ssh -oStrictHostKeyChecking=no mininet@10.0.0.3 "sudo D-ITG/D-ITG-2.8.0-rc1/bin/ITGLog 0>/dev/null" &'
+ssh -oStrictHostKeyChecking=no mininet@10.0.0.3 "sudo ~/D-ITG/bin/ITGLog 0>/dev/null" &'
 ##########################################################################################################################################
 echo '***** client 1'
 bash -i -l -c 'sshpass -p mininet \
-ssh -oStrictHostKeyChecking=no mininet@10.0.0.1 "sudo D-ITG/D-ITG-2.8.0-rc1/bin/ITGRecv 0>/dev/null" &'
+ssh -oStrictHostKeyChecking=no mininet@10.0.0.1 "sudo ~/D-ITG/bin/ITGRecv 0>/dev/null" &'
 ###########################################################################################################################################
 #echo '***** client 2'
 #bash -i -l -c 'sshpass -p mininet \
